@@ -1,7 +1,22 @@
+import * as SliderPrimitive from "@radix-ui/react-slider"
+import { forwardRef } from "react"
 
 
 
+const Slider = forwardRef<
+  React.ElementRef<typeof SliderPrimitive.Root>,
+  React.ComponentPropsWithoutRef<typeof SliderPrimitive.Root>
+>(({ className, ...props }, ref) => (
+  <SliderPrimitive.Root
+    ref={ref}
+    {...props}
+  >
+    <SliderPrimitive.Track>
+      <SliderPrimitive.Range  />
+    </SliderPrimitive.Track>
+    <SliderPrimitive.Thumb  />
+  </SliderPrimitive.Root>
+))
+Slider.displayName = SliderPrimitive.Root.displayName
 
-export default function Slider(){
-    
-}
+export { Slider }
