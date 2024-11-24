@@ -10,6 +10,7 @@ const Slider = forwardRef<
   <SliderPrimitive.Root
     ref={ref}
     {...props}
+    className="relative flex w-full touch-none items-center"
   >
     <SliderPrimitive.Track>
       <SliderPrimitive.Range  />
