@@ -12,8 +12,8 @@ const Slider = forwardRef<
     {...props}
     className="relative flex w-full touch-none items-center"
   >
-    <SliderPrimitive.Track>
-      <SliderPrimitive.Range  />
+    <SliderPrimitive.Track className="relative h-2 w-full grow overflow-hidden rounded-full bg-indigo-400">
+      <SliderPrimitive.Range className="absolute h-full bg-indigo-400"  />
     </SliderPrimitive.Track>
     <SliderPrimitive.Thumb  />
   </SliderPrimitive.Root>
